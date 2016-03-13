@@ -10,6 +10,7 @@ namespace Janra.Http.Internal.Network.Api
 		Task<byte[]> ReadAsync(int numberOfBytesToRead);
 		bool IsSecure();
 		void Close();
+		void Dispose();
 	}
 }
 

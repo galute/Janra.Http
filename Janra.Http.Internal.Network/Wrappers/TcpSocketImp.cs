@@ -42,6 +42,11 @@ namespace Janra.Http.Internal.Network.Wrappers
 			_stream.Close();
 		}
 
+		public void Dispose()
+		{
+			_stream.Dispose();
+		}
+
 		~TcpSocketImp()
 		{
 			Close();

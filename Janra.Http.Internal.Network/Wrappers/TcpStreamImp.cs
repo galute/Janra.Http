@@ -8,6 +8,7 @@ namespace Janra.Http.Internal.Network
 	public class TcpStreamImp : ITcpStream
 	{
 		private readonly NetworkStream _stream;
+		private bool _isDisposed = false;
 
 		public TcpStreamImp(Socket socket)
 		{
@@ -64,12 +65,21 @@ namespace Janra.Http.Internal.Network
 
 		public void Close()
 		{
-			_stream.Close();
+			Dispose();
+		}
+
+		public void Dispose()
+		{
+			if (!_isDisposed)
+			{
+				_isDisposed = true;
+				_stream.Dispose();
+			}
 		}
 
 		~TcpStreamImp()
 		{
-			Close();
+			Dispose();
 		}
 	}
 }

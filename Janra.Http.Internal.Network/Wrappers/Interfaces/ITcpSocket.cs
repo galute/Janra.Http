@@ -8,6 +8,7 @@ namespace Janra.Http.Internal.Network.Wrappers
 		bool IsConnected();
 		ITcpStream Stream();
 		void Close();
+		void Dispose();
 	}
 }
 

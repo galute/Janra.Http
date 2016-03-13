@@ -5,10 +5,10 @@ namespace Janra.Http.Internal.Network
 	public interface IConnection
 	{
 		void Connect();
-		void Read();
-		Task ReadAsync();
-		void Write();
-		Task WriteAsync();
+		byte[] Read(int numBytes);
+		Task<byte[]> ReadAsync(int numBytes);
+		void Write(byte[] bytes);
+		Task WriteAsync(byte[] bytes);
 	}
 }
 
