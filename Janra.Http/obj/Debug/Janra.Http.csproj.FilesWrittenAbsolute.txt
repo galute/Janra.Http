@@ -1,9 +1,0 @@
-/Users/jmillen/Code/Janra.Http/Janra.Http/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/jmillen/Code/Janra.Http/Janra.Http/bin/Debug/Janra.Http.dll.mdb
-/Users/jmillen/Code/Janra.Http/Janra.Http/bin/Debug/Janra.Http.dll
-/Users/jmillen/Code/Janra.Http/Janra.Http/obj/Debug/Janra.Http.dll
-/Users/jmillen/Code/Janra.Http/Janra.Http/obj/Debug/Janra.Http.dll.mdb
-/Users/jmillen/Code/Janra.Http/Janra.Http/bin/Debug/Janra.Http.Internal.Network.dll
-/Users/jmillen/Code/Janra.Http/Janra.Http/bin/Debug/Janra.Http.Internal.Network.dll.mdb
-/Users/jmillen/Code/Janra.Http/Janra.Http/bin/Debug/Janra.Http.Internal.Protocol.dll
-/Users/jmillen/Code/Janra.Http/Janra.Http/bin/Debug/Janra.Http.Internal.Protocol.dll.mdb
