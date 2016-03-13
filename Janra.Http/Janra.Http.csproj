@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7875315A-FFEA-437C-BB45-80002F0B77EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Janra.Http</RootNamespace>
+    <AssemblyName>Janra.Http</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Api\HttpStatus.cs" />
+    <Compile Include="Api\IHttpClient.cs" />
+    <Compile Include="Internal\HttpClientImp.cs" />
+    <Compile Include="Api\HttpClientResponse.cs" />
+    <Compile Include="Api\InvalidUrlException.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Api\" />
+    <Folder Include="Internal\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Janra.Http.Internal.Network\Janra.Http.Internal.Network.csproj">
+      <Project>{4C64C0F1-C5A1-4BDB-944A-8D9811D8C826}</Project>
+      <Name>Janra.Http.Internal.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Janra.Http.Internal.Protocol\Janra.Http.Internal.Protocol.csproj">
+      <Project>{3FC96A65-2AB7-4324-9E2B-40919858870C}</Project>
+      <Name>Janra.Http.Internal.Protocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

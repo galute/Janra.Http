@@ -1,0 +1,41 @@
+﻿<Properties StartupItem="Janra.Http/Janra.Http.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Janra.Http.Internal.Network.Tests/ConnectionImpTests.cs">
+    <Files>
+      <File FileName="Janra.Http.Internal.Network/Wrappers/Interfaces/ITcpSocket.cs" Line="7" Column="25" />
+      <File FileName="Janra.Http.Internal.Network.Tests/ConnectionImpTests.cs" Line="74" Column="27" />
+      <File FileName="Janra.Http.Internal.Network/ConnectionImp.cs" Line="35" Column="1" />
+      <File FileName="Janra.Http.Internal.Network/Api/Exceptions/NotConnectedException.cs" Line="9" Column="4" />
+      <File FileName="Janra.Http.Internal.Network/Api/Exceptions/StreamNotReadableException.cs" Line="7" Column="68" />
+      <File FileName="Janra.Http.Internal.Network.Tests/Models/TcpAddressTests.cs" Line="27" Column="108" />
+      <File FileName="Janra.Http.Internal.Network/Api/IConnection.cs" Line="9" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="Janra.Http" expanded="True">
+            <Node name="Janra.Http.Internal.Network.Tests" expanded="True">
+              <Node name="Janra" expanded="True">
+                <Node name="Http" expanded="True">
+                  <Node name="Internal" expanded="True">
+                    <Node name="Network" expanded="True">
+                      <Node name="Tests" expanded="True">
+                        <Node name="ConnectionImpTests" expanded="True">
+                          <Node name="ReadAsyncThrowsExceptionIfNotConnected" selected="True" />
+                        </Node>
+                      </Node>
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

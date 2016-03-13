@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C64C0F1-C5A1-4BDB-944A-8D9811D8C826}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Janra.Http.Internal.Network</RootNamespace>
+    <AssemblyName>Janra.Http.Internal.Network</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="FakeItEasy">
+      <HintPath>..\packages\FakeItEasy.1.25.3\lib\net40\FakeItEasy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Api\ITcpHostAddress.cs" />
+    <Compile Include="Api\IEndPoint.cs" />
+    <Compile Include="Wrappers\DnsLookupImp.cs" />
+    <Compile Include="Api\ITcpStream.cs" />
+    <Compile Include="Models\TcpAddress.cs" />
+    <Compile Include="Models\EndPointImp.cs" />
+    <Compile Include="Wrappers\Interfaces\IDnsLookup.cs" />
+    <Compile Include="Api\IConnection.cs" />
+    <Compile Include="ConnectionImp.cs" />
+    <Compile Include="Wrappers\Interfaces\ITcpSocket.cs" />
+    <Compile Include="Wrappers\TcpSocketImp.cs" />
+    <Compile Include="Wrappers\TcpStreamImp.cs" />
+    <Compile Include="Api\Exceptions\DnsLookupException.cs" />
+    <Compile Include="Api\Exceptions\NoDataReadException.cs" />
+    <Compile Include="Api\Exceptions\StreamNotReadableException.cs" />
+    <Compile Include="Api\Exceptions\StreamNotWriteableException.cs" />
+    <Compile Include="Api\Exceptions\NotConnectedException.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Wrappers\" />
+    <Folder Include="Api\" />
+    <Folder Include="Wrappers\Interfaces\" />
+    <Folder Include="Models\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Api\Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

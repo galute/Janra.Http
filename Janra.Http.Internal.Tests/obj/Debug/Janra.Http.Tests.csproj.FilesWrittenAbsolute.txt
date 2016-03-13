@@ -1,0 +1,13 @@
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/Janra.Http.Internal.Tests.dll.mdb
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/Janra.Http.Internal.Tests.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/obj/Debug/Janra.Http.Internal.Tests.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/obj/Debug/Janra.Http.Internal.Tests.dll.mdb
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/nunit.framework.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/FakeItEasy.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/Janra.Http.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/Janra.Http.dll.mdb
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/Janra.Http.Internal.Network.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/Janra.Http.Internal.Network.dll.mdb
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/Janra.Http.Internal.Protocol.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Tests/bin/Debug/Janra.Http.Internal.Protocol.dll.mdb

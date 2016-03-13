@@ -1,0 +1,6 @@
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Network/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Network/bin/Debug/FakeItEasy.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Network/bin/Debug/Janra.Http.Internal.Network.dll.mdb
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Network/bin/Debug/Janra.Http.Internal.Network.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Network/obj/Debug/Janra.Http.Internal.Network.dll
+/Users/jmillen/Code/Janra.Http/Janra.Http.Internal.Network/obj/Debug/Janra.Http.Internal.Network.dll.mdb

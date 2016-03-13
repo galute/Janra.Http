@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janra.Http", "Janra.Http\Janra.Http.csproj", "{7875315A-FFEA-437C-BB45-80002F0B77EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janra.Http.Tests", "Janra.Http.Internal.Tests\Janra.Http.Tests.csproj", "{42434980-0EF1-45A9-8FB1-2DE67CE0ABA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janra.Http.Internal.Network", "Janra.Http.Internal.Network\Janra.Http.Internal.Network.csproj", "{4C64C0F1-C5A1-4BDB-944A-8D9811D8C826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janra.Http.Internal.Network.Tests", "Janra.Http.Internal.Network.Tests\Janra.Http.Internal.Network.Tests.csproj", "{366E3DE6-C09E-4E22-99F2-118A51E4E63F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janra.Http.Internal.Protocol", "Janra.Http.Internal.Protocol\Janra.Http.Internal.Protocol.csproj", "{3FC96A65-2AB7-4324-9E2B-40919858870C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janra.Http.Internal.Protocol.Tests", "Janra.Http.Internal.Protocol.Tests\Janra.Http.Internal.Protocol.Tests.csproj", "{522FA2EA-41B4-4AE4-A3F4-1118539BDAC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{366E3DE6-C09E-4E22-99F2-118A51E4E63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366E3DE6-C09E-4E22-99F2-118A51E4E63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366E3DE6-C09E-4E22-99F2-118A51E4E63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366E3DE6-C09E-4E22-99F2-118A51E4E63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC96A65-2AB7-4324-9E2B-40919858870C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC96A65-2AB7-4324-9E2B-40919858870C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC96A65-2AB7-4324-9E2B-40919858870C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC96A65-2AB7-4324-9E2B-40919858870C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42434980-0EF1-45A9-8FB1-2DE67CE0ABA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42434980-0EF1-45A9-8FB1-2DE67CE0ABA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42434980-0EF1-45A9-8FB1-2DE67CE0ABA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42434980-0EF1-45A9-8FB1-2DE67CE0ABA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C64C0F1-C5A1-4BDB-944A-8D9811D8C826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C64C0F1-C5A1-4BDB-944A-8D9811D8C826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C64C0F1-C5A1-4BDB-944A-8D9811D8C826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C64C0F1-C5A1-4BDB-944A-8D9811D8C826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522FA2EA-41B4-4AE4-A3F4-1118539BDAC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522FA2EA-41B4-4AE4-A3F4-1118539BDAC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522FA2EA-41B4-4AE4-A3F4-1118539BDAC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522FA2EA-41B4-4AE4-A3F4-1118539BDAC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7875315A-FFEA-437C-BB45-80002F0B77EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7875315A-FFEA-437C-BB45-80002F0B77EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7875315A-FFEA-437C-BB45-80002F0B77EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7875315A-FFEA-437C-BB45-80002F0B77EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
