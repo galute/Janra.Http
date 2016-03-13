@@ -1,0 +1,5 @@
+*.userprefs
+*.dll
+*.mdb
+.NETFramework,Version=v4.5.AssemblyAttribute.cs
+*.csproj.FilesWrittenAbsolute.txt
