@@ -1,6 +1,4 @@
 ﻿using Janra.Http.Api;
-using Janra.Http.Internal.Network.Wrappers;
-using Janra.Http.Internal.Network.Api;
 using Janra.Http.Internal.Protocol.Models;
 using Janra.Http.Internal.Protocol.Parsers;
 

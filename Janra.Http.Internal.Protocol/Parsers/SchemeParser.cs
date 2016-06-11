@@ -1,4 +1,5 @@
-﻿using Janra.Http.Internal.Protocol.Models;
+﻿using System;
+using Janra.Http.Internal.Protocol.Models;
 
 namespace Janra.Http.Internal.Protocol.Parsers
 {
@@ -10,7 +11,7 @@ namespace Janra.Http.Internal.Protocol.Parsers
 		public unsafe char * Parse(char * ptr)
 		{
 			var retVal = ptr;
-			var protocol = new char[6];
+			var protocol = new char[1024];
 			var idx = 0;
 			char * pChar = ptr;
 			var correctSeparator = 0;
@@ -46,14 +47,22 @@ namespace Janra.Http.Internal.Protocol.Parsers
 						}
 
 						break;
-					case '.':
+					case '\0':
 						protocol = "http".ToCharArray();
 						retVal = ptr;
 						isFinished = true;
-						break;
+					    break;
 					default:
-						retVal = pChar;
-						protocol[idx++] = currentChar;
+					    // Valid scheme characters are alphanumeric or +, - or . as defined rfc3986 para 3.1
+					    if (currentChar == '+' ||
+					        currentChar == '.' ||
+					        currentChar == '-' ||
+					        Char.IsLetterOrDigit(currentChar))
+						{
+							retVal = pChar;
+							protocol [idx++] = currentChar;
+						}
+						
 						break;
 				}
 						
@@ -70,10 +79,10 @@ namespace Janra.Http.Internal.Protocol.Parsers
 			fixed (char * pProtocol = protocolArray)
 			{
 				var protocolTxt = new string(pProtocol);
+				DefaultPort = 80;
 
 				if (protocolTxt.Equals("http"))
 				{
-					DefaultPort = 80;
 					return SchemeType.Http;
 				}
 

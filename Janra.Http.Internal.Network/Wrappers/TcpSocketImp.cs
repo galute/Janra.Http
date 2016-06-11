@@ -1,6 +1,5 @@
 ﻿using System.Net.Sockets;
 using Janra.Http.Internal.Network.Api;
-using Janra.Http.Internal.Network.Wrappers;
 
 namespace Janra.Http.Internal.Network.Wrappers
 {

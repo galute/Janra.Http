@@ -15,8 +15,7 @@ namespace Janra.Http.Internal.Protocol.Tests
 			_unitUnderTest = new SchemeParser();
 		}
 
-		[Test]
-		[TestCase("http://my.website.com", SchemeType.Http, 'm')]
+		[TestCase("http://zy.website.com", SchemeType.Http, 'z')]
 		[TestCase("https://my.website.com", SchemeType.Https, 'm')]
 		[TestCase("https://my.website.com:1000", SchemeType.Https, 'm')]
 		[TestCase("http://my.website.com:1000", SchemeType.Http, 'm')]

@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janra.Http.Internal.Protoco
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janra.Http.Internal.Protocol.Tests", "Janra.Http.Internal.Protocol.Tests\Janra.Http.Internal.Protocol.Tests.csproj", "{522FA2EA-41B4-4AE4-A3F4-1118539BDAC6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{C6D1C1BC-81AE-4813-BF41-8DF5E1E21861}"
+	ProjectSection(SolutionItems) = preProject
+		build\build.sh = build\build.sh
+		build\test.sh = build\test.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,5 +49,7 @@ Global
 		{7875315A-FFEA-437C-BB45-80002F0B77EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7875315A-FFEA-437C-BB45-80002F0B77EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7875315A-FFEA-437C-BB45-80002F0B77EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

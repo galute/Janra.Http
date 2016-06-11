@@ -1,10 +1,10 @@
-﻿using NUnit.Framework;
+﻿using System;
 using FakeItEasy;
-using Janra.Http.Internal.Network.Wrappers;
 using Janra.Http.Internal.Network.Models;
-using System;
+using Janra.Http.Internal.Network.Wrappers;
+using NUnit.Framework;
 
-namespace Janra.Http.Internal.Network.Tests
+namespace Janra.Http.Internal.Network.Tests.Models
 {
 	[TestFixture]
 	public class TcpAddressTests

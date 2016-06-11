@@ -40,6 +40,7 @@
     <Compile Include="Parsers\HostParser.cs" />
     <Compile Include="Parsers\SchemeParser.cs" />
     <Compile Include="Models\SchemeType.cs" />
+    <Compile Include="Parsers\EndPointParser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

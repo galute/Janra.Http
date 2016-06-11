@@ -33,6 +33,8 @@ namespace Janra.Http.Internal.Protocol.Parsers
 							retVal = pChar;
 							isFinished = true;
 							break;
+					    case ':':
+						    break;
 						default:
 							Port = Default;
 							retVal = ptr;
@@ -49,9 +51,17 @@ namespace Janra.Http.Internal.Protocol.Parsers
 			{
 				fixed (char * pPort = port)
 				{
-					var portTxt = new string(pPort);
+					if (*pPort == '\0')
+					{
+						Port = -1;
+					}
+					else
+					{
+						var portTxt = new string (pPort);
 
-					Port = int.Parse(portTxt);
+						Port = int.Parse (portTxt);
+					}
+
 				}
 			}
 
