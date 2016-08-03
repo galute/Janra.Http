@@ -5,3 +5,4 @@
 *.csproj.FilesWrittenAbsolute.txt
 packages/**
 .idea/**
+.idea.**
