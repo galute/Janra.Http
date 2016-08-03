@@ -47,6 +47,11 @@ namespace Janra.Http.Internal.Protocol.Parsers
 				EndPoint = _endPointParser.EndPoint;
 			}
 		}
+
+		public LocalUri GetUri()
+		{
+			return new LocalUri { Host = Host, Port = Port, EndPoint = EndPoint, Scheme = Protocol };
+		}
 	}
 }
 

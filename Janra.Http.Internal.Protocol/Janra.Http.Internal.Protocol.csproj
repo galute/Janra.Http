@@ -34,7 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Url.cs" />
+    <Compile Include="Models\LocalUri.cs" />
     <Compile Include="Parsers\PortParser.cs" />
     <Compile Include="Parsers\UrlParser.cs" />
     <Compile Include="Parsers\HostParser.cs" />

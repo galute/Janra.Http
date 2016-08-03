@@ -6,8 +6,11 @@ namespace Janra.Http.Internal
 {
 	public class HttpClientImp : IHttpClient
 	{
+		UrlParser _parser;
+
 		public HttpClientImp()
 		{
+			_parser = new UrlParser ();
 		}
 
 		public HttpClientResponse Get(string endpoint)
@@ -16,6 +19,9 @@ namespace Janra.Http.Internal
 			{
 				throw new InvalidUrlException("Endpoint cannot be null for GET operation");
 			}
+
+			_parser.ParseIt(endpoint);
+			var request = _parser.GetUri();
 
 			return new HttpClientResponse(HttpStatus.OK);
 		}
@@ -36,7 +42,7 @@ namespace Janra.Http.Internal
 				port = schemeParser.DefaultPort;
 			}
 
-			var url = new Url(){Scheme = scheme, Host = host, EndPoint = endpoint, Port = port};
+			var url = new LocalUri(){Scheme = scheme, Host = host, EndPoint = endpoint, Port = port};
 
 			return new HttpClientResponse(HttpStatus.OK);
 		}

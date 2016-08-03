@@ -1,6 +1,6 @@
 ﻿namespace Janra.Http.Internal.Protocol.Models
 {
-	public class Url
+	public class LocalUri
 	{
 		public SchemeType Scheme { get; set;}
 		public string EndPoint { get; set;}
