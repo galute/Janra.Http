@@ -1,14 +1,14 @@
 ﻿using System;
-using Janra.Http.Internal.Network;
 using Janra.Http.Internal.Network.Wrappers;
 using System.Threading.Tasks;
+using Janra.Http.Internal.Network.Api;
 
 namespace Janra.Http.Internal.Network
 {
 	public class ConnectionImp : IConnection, IDisposable
 	{
-		readonly ITcpSocket _socket;
-		IEndPoint _endPoint;
+		private readonly ITcpSocket _socket;
+		private readonly IEndPoint _endPoint;
 
 		public ConnectionImp(IEndPoint endPoint, ITcpSocket socket)
 		{

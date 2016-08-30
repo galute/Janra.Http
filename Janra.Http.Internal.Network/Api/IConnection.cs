@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Janra.Http.Internal.Network
+namespace Janra.Http.Internal.Network.Api
 {
 	public interface IConnection
 	{
