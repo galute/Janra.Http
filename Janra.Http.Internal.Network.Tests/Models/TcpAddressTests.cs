@@ -1,5 +1,6 @@
 ﻿using System;
 using FakeItEasy;
+using Janra.Http.Internal.Network.Api.Exceptions;
 using Janra.Http.Internal.Network.Models;
 using Janra.Http.Internal.Network.Wrappers;
 using NUnit.Framework;

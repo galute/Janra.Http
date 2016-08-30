@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Janra.Http.Internal.Protocol.Parsers;
 using NUnit.Framework;
 
-namespace Janra.Http.Internal.Protocol.Tests
+namespace Janra.Http.Internal.Protocol.Tests.Parsers
 {
 	[TestFixture]
 	public class HostParserTests

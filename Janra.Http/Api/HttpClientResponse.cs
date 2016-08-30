@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Janra.Http.Api
+﻿namespace Janra.Http.Api
 {
 	public class HttpClientResponse
 	{
@@ -12,4 +10,3 @@ namespace Janra.Http.Api
 		}
 	}
 }
-

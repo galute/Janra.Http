@@ -1,5 +1,4 @@
-﻿using System;
-using Janra.Http.Internal.Protocol.Models;
+﻿using Janra.Http.Internal.Protocol.Models;
 
 
 namespace Janra.Http.Internal.Protocol.Parsers
@@ -31,7 +30,7 @@ namespace Janra.Http.Internal.Protocol.Parsers
 
 			fixed (char * pString = charArray)
 			{
-				char * pChar = pString;
+				var pChar = pString;
 
 				pChar = _schemeParser.Parse(pChar);
 				Protocol = _schemeParser.Protocol;

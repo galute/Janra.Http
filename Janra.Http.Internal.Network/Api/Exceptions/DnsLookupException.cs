@@ -1,6 +1,6 @@
 using System;
 
-namespace Janra.Http.Internal.Network
+namespace Janra.Http.Internal.Network.Api.Exceptions
 {
 	public class DnsLookupException : Exception
 	{

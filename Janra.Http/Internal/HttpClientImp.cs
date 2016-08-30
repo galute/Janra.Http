@@ -6,7 +6,7 @@ namespace Janra.Http.Internal
 {
 	public class HttpClientImp : IHttpClient
 	{
-		UrlParser _parser;
+	    private readonly UrlParser _parser;
 
 		public HttpClientImp()
 		{
@@ -23,7 +23,7 @@ namespace Janra.Http.Internal
 			_parser.ParseIt(endpoint);
 			var request = _parser.GetUri();
 
-			return new HttpClientResponse(HttpStatus.OK);
+			return new HttpClientResponse(HttpStatus.Ok);
 		}
 
 		public HttpClientResponse Get(string protocol, string host, string endpoint, int port = 84)
@@ -44,7 +44,7 @@ namespace Janra.Http.Internal
 
 			var url = new LocalUri(){Scheme = scheme, Host = host, EndPoint = endpoint, Port = port};
 
-			return new HttpClientResponse(HttpStatus.OK);
+			return new HttpClientResponse(HttpStatus.Ok);
 		}
 	}
 }

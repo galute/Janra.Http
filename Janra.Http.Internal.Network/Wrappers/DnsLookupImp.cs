@@ -1,6 +1,5 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
-using Janra.Http.Internal.Network.Wrappers;
 
 namespace Janra.Http.Internal.Network.Wrappers
 {

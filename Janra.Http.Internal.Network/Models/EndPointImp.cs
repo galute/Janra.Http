@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using Janra.Http.Internal.Network.Api;
 
 namespace Janra.Http.Internal.Network.Models
 {
@@ -14,21 +13,9 @@ namespace Janra.Http.Internal.Network.Models
 			_url = url;
 		}
 
-		public IPEndPoint Value
-		{
-			get
-			{
-				return _endpoint;
-			}
-		}
+	    IPEndPoint IEndPoint.Value => _endpoint;
 
-		public string ServerName
-		{
-			get
-			{
-				return _url;
-			}
-		}
+	    string IEndPoint.ServerName => _url;
 	}
 }
 

@@ -12,15 +12,15 @@ namespace Janra.Http.Internal.Protocol.Parsers
 			var retVal = ptr;
 			var port = new char[10];
 			var idx = 0;
-			char * pChar = ptr;
+			var pChar = ptr;
 			var isFinished = false;
 			var parseValue = true;
 
 			while (!isFinished)
 			{
-				char currentChar = *pChar;
+				var currentChar = *pChar;
 
-				if (Char.IsNumber(currentChar))
+				if (char.IsNumber(currentChar))
 				{
 					port[idx++] = currentChar;
 				}

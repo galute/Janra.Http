@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Janra.Http.Internal.Protocol
+namespace Janra.Http.Internal.Protocol.Parsers
 {
 	public class EndPointParser
 	{
@@ -11,7 +11,7 @@ namespace Janra.Http.Internal.Protocol
 			var retVal = ptr;
 			var endPoint = new char[2048];
 			var idx = 0;
-			char * pChar = ptr;
+			var pChar = ptr;
 			var isFinished = false;
 
 			if (*pChar == '/')
@@ -21,9 +21,9 @@ namespace Janra.Http.Internal.Protocol
 
 			while (!isFinished)
 			{
-				char currentChar = *pChar;
+				var currentChar = *pChar;
 
-				if (Char.IsNumber(currentChar))
+				if (char.IsNumber(currentChar))
 				{
 					endPoint[idx++] = currentChar;
 				}

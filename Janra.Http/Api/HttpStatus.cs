@@ -4,7 +4,7 @@
 	{
 		Continue = 100,
 		SwitchingProtocols = 101,
-		OK = 200,
+		Ok = 200,
 		Created =201,
 		Accepted = 202,
 		NonAuthoritativeInformation = 203,
@@ -32,7 +32,7 @@
 		LengthRequired = 411,
 		PreconditionFailed = 412,
 		RequestEntityTooLarge = 413,
-		RequestURITooLarge = 414,
+		RequestUriTooLarge = 414,
 		UnsupportedMediaType = 415,
 		RequestedRangeNotSatisfiable = 416,
 		ExpectationFailed =417,

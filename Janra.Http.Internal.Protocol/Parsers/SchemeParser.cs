@@ -1,5 +1,4 @@
-﻿using System;
-using Janra.Http.Internal.Protocol.Models;
+﻿using Janra.Http.Internal.Protocol.Models;
 
 namespace Janra.Http.Internal.Protocol.Parsers
 {
@@ -13,13 +12,13 @@ namespace Janra.Http.Internal.Protocol.Parsers
 			var retVal = ptr;
 			var protocol = new char[1024];
 			var idx = 0;
-			char * pChar = ptr;
+			var pChar = ptr;
 			var correctSeparator = 0;
 			var isFinished = false;
 
 			while (!isFinished)
 			{
-				char currentChar = *pChar;
+				var currentChar = *pChar;
 
 				switch (currentChar)
 				{
@@ -36,14 +35,19 @@ namespace Janra.Http.Internal.Protocol.Parsers
 
 						break;
 					case '/':
-						if (correctSeparator == 1)
+						switch (correctSeparator)
 						{
-							correctSeparator++;
-						}
-						else if (correctSeparator == 2)
-						{
-							isFinished = true;
-							retVal = ++pChar;
+						    case 1:
+						        correctSeparator++;
+						        break;
+						    case 2:
+						        isFinished = true;
+						        retVal = ++pChar;
+						        break;
+						    default:
+						        // makes no sense so return
+						        isFinished = true;
+						        break;
 						}
 
 						break;
@@ -57,7 +61,7 @@ namespace Janra.Http.Internal.Protocol.Parsers
 					    if (currentChar == '+' ||
 					        currentChar == '.' ||
 					        currentChar == '-' ||
-					        Char.IsLetterOrDigit(currentChar))
+					        char.IsLetterOrDigit(currentChar))
 						{
 							retVal = pChar;
 							protocol [idx++] = currentChar;
@@ -86,14 +90,13 @@ namespace Janra.Http.Internal.Protocol.Parsers
 					return SchemeType.Http;
 				}
 
-				if (protocolTxt.Equals("https"))
-				{
-					DefaultPort = 443;
-					return SchemeType.Https;
-				}
+			    if (!protocolTxt.Equals("https"))
+			    {
+			        return SchemeType.Unknown;
+			    }
+			    DefaultPort = 443;
+			    return SchemeType.Https;
 			}
-
-			return SchemeType.Unknown;
 		}
 	}
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Janra.Http.Internal.Protocol
+﻿namespace Janra.Http.Internal.Protocol.Parsers
 {
 	public class HostParser
 	{
@@ -11,14 +9,14 @@ namespace Janra.Http.Internal.Protocol
 			var retVal = ptr;
 			var host = new char[128];
 			var idx = 0;
-			char * pChar = ptr;
+			var pChar = ptr;
 			var isFinished = false;
 
 			while (!isFinished)
 			{
-				char currentChar = *pChar;
+				var currentChar = *pChar;
 
-				if (Char.IsNumber(currentChar))
+				if (char.IsNumber(currentChar))
 				{
 					host[idx++] = currentChar;
 				}
@@ -52,4 +50,3 @@ namespace Janra.Http.Internal.Protocol
 		}
 	}
 }
-

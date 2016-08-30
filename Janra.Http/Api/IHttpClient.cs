@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Janra.Http.Api
+﻿namespace Janra.Http.Api
 {
 	public interface IHttpClient
 	{

@@ -1,9 +1,8 @@
-﻿using System;
-using System.Net.Sockets;
-using Janra.Http.Internal.Network.Api;
+﻿using System.Net.Sockets;
 using System.Threading.Tasks;
+using Janra.Http.Internal.Network.Api;
 
-namespace Janra.Http.Internal.Network
+namespace Janra.Http.Internal.Network.Wrappers
 {
 	public class TcpStreamImp : ITcpStream
 	{
@@ -17,27 +16,29 @@ namespace Janra.Http.Internal.Network
 
 		public byte[] Read(int numberOfBytesToRead)
 		{
-			if (_stream.CanRead)
-			{
-				var bytesOut = new byte[numberOfBytesToRead];
-				_stream.Read(bytesOut, 0, numberOfBytesToRead);
+		    if (!_stream.CanRead)
+		    {
+		        throw new StreamNotReadableException("NetworkStream is not in a readable state.");
+		    }
 
-				return bytesOut;
-			}
-			throw new StreamNotReadableException("NetworkStream is not in a readable state.");
+		    var bytesOut = new byte[numberOfBytesToRead];
+		    _stream.Read(bytesOut, 0, numberOfBytesToRead);
+
+		    return bytesOut;
 		}
 
 		public async Task<byte[]> ReadAsync(int numberOfBytesToRead)
 		{
-			if (_stream.CanRead)
-			{
-				var bytesOut = new byte[numberOfBytesToRead];
+		    if (!_stream.CanRead)
+		    {
+		        throw new StreamNotReadableException("NetworkStream is not in a readable state.");
+		    }
 
-				await _stream.ReadAsync(bytesOut, 0, numberOfBytesToRead);
+		    var bytesOut = new byte[numberOfBytesToRead];
 
-				return bytesOut;
-			}
-			throw new StreamNotReadableException("NetworkStream is not in a readable state.");
+		    await _stream.ReadAsync(bytesOut, 0, numberOfBytesToRead);
+
+		    return bytesOut;
 		}
 
 		public void Write(byte[] message)
@@ -70,11 +71,13 @@ namespace Janra.Http.Internal.Network
 
 		public void Dispose()
 		{
-			if (!_isDisposed)
-			{
-				_isDisposed = true;
-				_stream.Dispose();
-			}
+		    if (_isDisposed)
+		    {
+		        return;
+		    }
+
+		    _isDisposed = true;
+		    _stream.Dispose();
 		}
 
 		~TcpStreamImp()
