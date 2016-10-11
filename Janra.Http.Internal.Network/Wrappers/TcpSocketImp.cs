@@ -38,11 +38,14 @@ namespace Janra.Http.Internal.Network.Wrappers
 
 		public void Close()
 		{
-			_stream.Close();
+			_socket.Shutdown(SocketShutdown.Both);
+		    _stream.Dispose();
+		    _stream = null;
 		}
 
 		public void Dispose()
 		{
+		    // The stream will call Dispose() on it's associated socket
 			_stream.Dispose();
 		}
 
